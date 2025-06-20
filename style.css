@@ -1,0 +1,85 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    color: black;
+    border: none;
+    outline: none;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: url('Montserrat-VariableFont_wght') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+body {
+    background-color: beige;
+    font-family: 'Montserrat',sans-serif;
+}
+
+.title{
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+#book{
+    padding: 16px;
+    font-size: 1rem;
+    border-radius: 10px;
+    border: 0px ;
+    background-color: rgb(153, 107, 54);
+    cursor:pointer;
+}
+
+#form{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    font-family: "Montserrat" , sans-serif;
+    font-size: 1.2rem;
+}
+
+input, select {
+    padding: 5px;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: rgb(230, 212, 200);
+}
+
+#submit-button, #cancel {
+    padding: 16px 24px;
+    border-radius: 10px;
+    background-color: rgb(187, 151, 127);
+    font-size: 1rem;
+    cursor: pointer;
+}
+
+dialog {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 12px;
+    border-radius: 9px;
+}
+
+.form-buttons{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+::backdrop {
+  background-color: rgba(75, 67, 54, 0.39);
+}

@@ -1,14 +1,14 @@
 const myLibrary = [];
-function Book(name, author, pages, read) {
-    this.name = name;
-    this.pages = pages;
-    this.author = author;
-    this.read = read;
-    this.id = crypto.randomUUID();
-}
-Book.prototype.display = function(){
-    return this.id+" : "+this.name+" by "+this.author+", "+this.pages+", "+this.read;
-}
+// function Book(name, author, pages, read) {
+//     this.name = name;
+//     this.pages = pages;
+//     this.author = author;
+//     this.read = read;
+//     this.id = crypto.randomUUID();
+// }
+// Book.prototype.display = function(){
+//     return this.id+" : "+this.name+" by "+this.author+", "+this.pages+", "+this.read;
+// }
 function addBookToLibrary(name, author, pages, read){
     let book = new Book(name, author, pages, read);
     myLibrary.push(book);
@@ -16,6 +16,23 @@ function addBookToLibrary(name, author, pages, read){
 function displayBooks(){
     for(let i=0 ; i<myLibrary.length ; i++){
         console.log(myLibrary[i].display());
+    }
+}
+class Book {
+    name;
+    pages;
+    author;
+    read;
+    id;
+    constructor(name, pages, author, read) {
+        this.name = name;
+        this.pages = pages;
+        this.author = author;
+        this.read = read;
+        this.id = crypto.randomUUID();
+    }
+    display() {
+        return this.id+" : "+this.name+" by "+this.author+", "+this.pages+", "+this.read;
     }
 }
 // function main() {
